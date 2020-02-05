@@ -1,0 +1,13 @@
+version: "3.7"
+services:
+
+  speedtest:
+    image: ubuntu:latest
+    container_name: speedtest
+    build:
+        context: .
+        args:
+            INSTALL_KEY: 379CE192D401AB61
+            DEB_DISTRO: bionic
+        dockerfile: ./Dockerfile
+    command: speedtest --accept-license
