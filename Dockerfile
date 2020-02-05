@@ -1,8 +1,8 @@
 FROM ubuntu:latest
 LABEL maintainer="me@mavelar.com"
 
-ARG INSTALL_KEY
-ARG DEB_DISTRO
+ARG INSTALL_KEY=379CE192D401AB61
+ARG DEB_DISTRO=bionic
 
 RUN apt-get update \
 	&& apt-get install -y gnupg1 apt-transport-https dirmngr \
